@@ -1,0 +1,171 @@
+* {
+  box-sizing:border-box;
+}
+
+html, body {
+  padding:0;
+  margin:0;
+  height:100%;
+  width:100%;
+  color: black;
+  background-color: #ebebeb;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.navbar {
+  background-color: #464775;
+}
+
+div.container-fluid {
+  height: 100%;
+}
+
+
+#chat input {
+  display:block;
+  max-width:800px;
+  width: 100%;
+  margin:10px auto;
+  outline:none;
+  background-color:transparent;
+  border:none;
+  border-bottom:1px solid #2B2B2A;
+  padding:0;
+  font-size:30px;
+}
+
+#messages {
+  /* background-color:#232323; */
+  padding:10px;
+  height:80%;
+  max-height: 75vh;
+  max-width:800px;
+  margin:0 auto;
+  overflow-y:auto;
+}
+
+#messages p {
+  margin:5px 0;
+  padding:0;
+}
+
+.info {
+  margin:5px 0;
+  font-style:italic;
+}
+
+.message-container {
+  margin:5px 0;
+  color:#242424;
+}
+
+.message-container .username {
+  display:inline-block;
+  margin-right:5px;
+  font-weight:bold;
+  color:#849091;
+}
+
+.me, .username.me {
+  font-weight:bold;
+  color: #dc3545;
+}
+
+.message-container .username.me {
+  display:inline-block;
+  margin-right:5px;
+}
+
+#join-call-btn {
+  margin: 0 auto;
+  display: block;
+}
+
+div#participants {
+  overflow-y: auto;
+}
+
+div.participant {
+  background: center no-repeat url("data:image/svg+xml;utf8,<svg class='bi bi-person-fill' width='80' height='45' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z' clip-rule='evenodd'/></svg>");
+  border: 1px solid gray;
+  display: inline-flex;
+  height: 90px;
+  margin: 10px 5px;
+  max-width: 160px;
+  overflow: hidden;
+}
+
+div.participant > video {
+  width: 100%;
+}
+
+div.participant.main {
+  height: inherit;
+  margin: 10px 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+div.participant.main > video {
+  /*height: 720px;*/
+  height: 80vh;
+}
+
+div.participant.active {
+  border: 1px solid crimson;
+  box-shadow: 0 0 5px crimson;
+}
+
+div.participant.active.pinned {
+  border: 1px solid limegreen;
+  box-shadow: 0 0 5px limegreen;
+}
+
+div.participant:hover {
+  cursor: pointer;
+}
+
+div.participant::before {
+  background-color: black;
+  color: white !important;
+  content: attr(data-identity);
+  font-size: 10px;
+  padding: 0 5px;
+  position: absolute;
+  z-index: 1000;
+}
+
+div.participant.main::before {
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+@media (max-width: 576px) {
+  div#participants {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  div.participant.main > video {
+    max-height: 180px;
+  }
+
+  #messages {
+    max-height: 180;
+  }
+}
+
+@media (max-width: 768px) {
+  div.participant.main > video {
+    max-height: 270px;
+  }
+
+  #messages {
+    max-height: 270px;
+  }
+}
+
+  .btn-secondary {
+    background-color: #464775;
+    border-color: #464775;
+  }

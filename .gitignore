@@ -1,0 +1,13 @@
+logs
+*.log
+npm-debug.log
+build/Release
+node_modules
+jspm_packages
+.env
+.DS_Store
+package-lock.json
+
+# The generated index.js
+public/index.js
+
