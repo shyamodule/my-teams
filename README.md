@@ -1,7 +1,5 @@
 # my-teams
 
-YouTube Video -- https://www.youtube.com/watch?v=mmEzeOOhOn4&feature=youtu.be
-
 This is just a simple clone of Microsoft Teams which has minimal functionality of chat and video-calling feature. 
 I have used Twilio Chat SDK and Twilio Video SDK for implementing these features.
 
